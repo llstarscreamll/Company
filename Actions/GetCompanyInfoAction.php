@@ -20,9 +20,12 @@ class GetCompanyInfoAction extends Action
     public function run()
     {
         $data = (object)[
-            'name' => 'Acme Inc.',
+            'fullname' => 'Acme Inc.',
+            'short_name' => 'Acme',
+            'big_name' => 'Acme',
+            'small_name' => 'Inc.',
             'cc_year' => '2017',
-            'website' => 'www.google.com',
+            'website' => 'www.acmeinc.com',
         ];
 
         return $data;

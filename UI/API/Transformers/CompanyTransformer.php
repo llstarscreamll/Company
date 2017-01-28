@@ -30,7 +30,10 @@ class CompanyTransformer extends Transformer
     {
         return [
             'object'    => 'Company',
-            'name'      => $company->name,
+            'fullname'  => $company->fullname,
+            'short_name'=> $company->short_name,
+            'small_name'=> $company->small_name,
+            'big_name'  => $company->big_name,
             'cc_year'   => $company->cc_year,
             'website'   => $company->website,
         ];

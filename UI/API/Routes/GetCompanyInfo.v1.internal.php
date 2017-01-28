@@ -26,5 +26,5 @@
  */
 
 $router->get('company-info', [
-    'uses'       => 'Controller@getCompanyInfo',
+    'uses'       => 'Controller@getCompanyInfo'
 ]);
