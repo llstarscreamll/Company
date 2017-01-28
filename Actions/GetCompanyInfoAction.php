@@ -20,12 +20,12 @@ class GetCompanyInfoAction extends Action
     public function run()
     {
         $data = (object)[
-            'fullname' => 'Acme Inc.',
-            'short_name' => 'Acme',
-            'big_name' => 'Acme',
-            'small_name' => 'Inc.',
-            'cc_year' => '2017',
-            'website' => 'www.acmeinc.com',
+            'fullname' => env('APP_FULNAME', 'Acme Inc.'),
+            'short_name' => env('APP_SHORT_NAME', 'Acme'),
+            'big_name' => env('APP_BIG_NAME', 'Acme'),
+            'small_name' => env('APP_SMALL_NAME', 'Inc.'),
+            'cc_year' => env('APP_CC_YEAR', date('Y')),
+            'website' => env('APP_WEBSITE', 'www.google.com'),
         ];
 
         return $data;
