@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Containers\Company\UI\API\Controllers;
+namespace App\Containers\AppData\UI\API\Controllers;
 
 use App\Port\Controller\Abstracts\PortApiController;
-use App\Containers\Company\Actions\GetCompanyInfoAction;
-use App\Containers\Company\UI\API\Transformers\CompanyTransformer;
+use App\Containers\AppData\Actions\GetCompanyInfoAction;
+use App\Containers\AppData\UI\API\Transformers\CompanyTransformer;
 
 /**
  * Class Controller.
@@ -14,7 +14,7 @@ use App\Containers\Company\UI\API\Transformers\CompanyTransformer;
 class Controller extends PortApiController
 {
     /**
-     * @param \App\Containers\Company\Actions\ListAllAppsAction $action
+     * @param \App\Containers\AppData\Actions\ListAllAppsAction $action
      *
      * @return  \Dingo\Api\Http\Response
      */

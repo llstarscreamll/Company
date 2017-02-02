@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Containers\Company\Actions;
+namespace App\Containers\AppData\Actions;
 
-use App\Containers\Company\Data\Repositories\ApplicationRepository;
+use App\Containers\AppData\Data\Repositories\ApplicationRepository;
 use App\Port\Action\Abstracts\Action;
 use App\Port\Criterias\Eloquent\OrderByCreationDateDescendingCriteria;
 use App\Port\Criterias\Eloquent\ThisUserCriteria;

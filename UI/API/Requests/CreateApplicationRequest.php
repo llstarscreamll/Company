@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Containers\Company\UI\API\Requests;
+namespace App\Containers\AppData\UI\API\Requests;
 
 use App\Port\Request\Abstracts\Request;
 

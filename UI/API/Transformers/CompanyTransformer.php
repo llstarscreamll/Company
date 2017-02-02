@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Containers\Company\UI\API\Transformers;
+namespace App\Containers\AppData\UI\API\Transformers;
 
 use App\Port\Transformer\Abstracts\Transformer;
 use StdClass;
@@ -29,7 +29,7 @@ class CompanyTransformer extends Transformer
     public function transform(StdClass $company)
     {
         return [
-            'object'    => 'Company',
+            'object'    => 'AppData',
             'fullname'  => $company->fullname,
             'short_name'=> $company->short_name,
             'small_name'=> $company->small_name,

@@ -1,21 +1,19 @@
 <?php
 
-namespace App\Containers\Company\UI\API\Tests\Functional;
+namespace app\Containers\AppData\UI\API\Tests\Functional;
 
-use App\Containers\Company\Models\Application;
 use App\Port\Tests\PHPUnit\Abstracts\TestCase;
 
 /**
- * Class GetCompanyInfoTest
+ * Class GetCompanyInfoTest.
  *
  * @author  Johan Alvarez <llstarscreamll@hotmail.com>
  */
 class GetCompanyInfoTest extends TestCase
 {
-
     private $endpoint = '/company-info';
 
-    public function testGetCompanyInfo_()
+    public function testGetCompanyInfo()
     {
         $user = $this->registerAndLoginTestingDeveloper();
 
@@ -28,13 +26,15 @@ class GetCompanyInfoTest extends TestCase
         $responseObject = $this->getResponseObject($response);
 
         $data = [
-            'object' => 'Company',
-            'name' => 'Acme Inc.',
-            'cc_year' => '2017',
-            'website' => 'www.google.com',
+            'object' => 'AppData',
+            'fullname' => env('APP_FULNAME', 'Acme Inc.'),
+            'short_name' => env('APP_SHORT_NAME', 'Acme'),
+            'big_name' => env('APP_BIG_NAME', 'Acme'),
+            'small_name' => env('APP_SMALL_NAME', 'Inc.'),
+            'cc_year' => env('APP_CC_YEAR', date('Y')),
+            'website' => env('APP_WEBSITE', 'www.google.com'),
         ];
 
-        $this->assertEquals((object)$data, $responseObject->data);
+        $this->assertEquals((object) $data, $responseObject->data);
     }
-
 }
