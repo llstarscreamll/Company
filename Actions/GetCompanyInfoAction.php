@@ -3,9 +3,7 @@
 namespace App\Containers\AppData\Actions;
 
 use App\Containers\AppData\Data\Repositories\ApplicationRepository;
-use App\Port\Action\Abstracts\Action;
-use App\Port\Criterias\Eloquent\OrderByCreationDateDescendingCriteria;
-use App\Port\Criterias\Eloquent\ThisUserCriteria;
+use App\Ship\Parents\Actions\Action;
 
 /**
  * Class ListAllAppsAction.

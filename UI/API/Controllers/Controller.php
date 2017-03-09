@@ -2,7 +2,7 @@
 
 namespace App\Containers\AppData\UI\API\Controllers;
 
-use App\Port\Controller\Abstracts\PortApiController;
+use App\Ship\Parents\Controllers\ApiController;
 use App\Containers\AppData\Actions\GetCompanyInfoAction;
 use App\Containers\AppData\UI\API\Transformers\CompanyTransformer;
 
@@ -11,7 +11,7 @@ use App\Containers\AppData\UI\API\Transformers\CompanyTransformer;
  *
  * @author Johan Alvarez <llstarscreamll@hotmail.com>
  */
-class Controller extends PortApiController
+class Controller extends ApiController
 {
     /**
      * @param \App\Containers\AppData\Actions\ListAllAppsAction $action

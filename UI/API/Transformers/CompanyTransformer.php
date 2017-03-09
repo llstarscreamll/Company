@@ -2,7 +2,7 @@
 
 namespace App\Containers\AppData\UI\API\Transformers;
 
-use App\Port\Transformer\Abstracts\Transformer;
+use App\Ship\Parents\Transformers\Transformer;
 use StdClass;
 
 /**

@@ -2,7 +2,7 @@
 
 namespace app\Containers\AppData\UI\API\Tests\Functional;
 
-use App\Port\Tests\PHPUnit\Abstracts\TestCase;
+use App\Ship\Parents\Tests\PhpUnit\TestCase;
 
 /**
  * Class GetCompanyInfoTest.
@@ -11,19 +11,19 @@ use App\Port\Tests\PHPUnit\Abstracts\TestCase;
  */
 class GetCompanyInfoTest extends TestCase
 {
-    private $endpoint = '/company-info';
+    protected $endpoint = 'get@company-info';
 
     public function testGetCompanyInfo()
     {
-        $user = $this->registerAndLoginTestingDeveloper();
+        $user = $this->getTestingUser();
 
         // send the HTTP request
-        $response = $this->apiCall($this->endpoint, 'get');
+        $response = $this->makeCall();
 
         // assert response status is correct
         $this->assertEquals($response->getStatusCode(), '200');
 
-        $responseObject = $this->getResponseObject($response);
+        $responseObject = $this->getResponseContent($response);
 
         $data = [
             'object' => 'AppData',
