@@ -21,7 +21,7 @@ class GetCompanyInfoTest extends TestCase
         $response = $this->makeCall();
 
         // assert response status is correct
-        $this->assertEquals($response->getStatusCode(), '200');
+        $this->assertEquals('200', $response->getStatusCode());
 
         $responseObject = $this->getResponseContent($response);
 
