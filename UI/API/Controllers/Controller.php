@@ -22,7 +22,7 @@ class Controller extends ApiController
     {
         $companyInfo = $action->run();
         
-        return $this->response->item($companyInfo, new CompanyTransformer());
+        return $this->transform($companyInfo, new CompanyTransformer());
     }
 
 }

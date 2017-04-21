@@ -11,7 +11,7 @@ use App\Ship\Parents\Tests\PhpUnit\TestCase;
  */
 class GetCompanyInfoTest extends TestCase
 {
-    protected $endpoint = 'get@company-info';
+    protected $endpoint = 'get@v1/company-info';
 
     public function testGetCompanyInfo()
     {
@@ -35,6 +35,6 @@ class GetCompanyInfoTest extends TestCase
             'website' => env('APP_WEBSITE', 'www.google.com'),
         ];
 
-        $this->assertEquals((object) $data, $responseObject->data);
+        $this->assertEquals((object) $data, json_decode($responseObject)->data);
     }
 }
